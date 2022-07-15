@@ -6,6 +6,8 @@ const char *battery_state(const char *);
 const char *battery_remaining(const char *);
 
 /* cpu */
+const char *internet(void);
+
 const char *cpu_freq(void);
 const char *cpu_perc(void);
 
