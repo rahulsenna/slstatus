@@ -73,10 +73,10 @@ static const struct arg args[] = {
     { ram_perc,    "[Ram %s%] ",   NULL },
     { ram_free,    "[Free %s] ",   NULL },
 
-    { netspeed_rx, "[ %s",       "enp0s31f6" },
-    { netspeed_tx, " %s]   ",    "enp0s31f6" },
+    { netspeed_rx, "[⇩ %s",       "enp0s31f6" },
+    { netspeed_tx, "⇪ %s]   ",    "enp0s31f6" },
     
-    { run_command, " %s ",       "amixer | sed -n -e 's/.*Front Left: Playback.* \\(\\[[[:digit:]]\\)/\\1/p'" },
+    { run_command, "🔊 %s ",       "amixer | sed -n -e 's/.*Front Left: Playback.* \\(\\[[[:digit:]]\\)/\\1/p'" },
 
 	{ datetime,    "%s",           "[%a %b %d] [%I:%M%p]" },
 

@@ -4,9 +4,9 @@ const char *internet(void)
 {
 
   if (gethostbyname("google.com") == 0)
-    return("");
+    return("🌐");
   else
-    return("");
+    return("🖥");
 
   return 0;
 }
