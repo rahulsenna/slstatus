@@ -66,15 +66,16 @@ static const char unknown_str[] = "n/a";
 static const struct arg args[] = {
     
 	/* function      format          argument */
-    { run_command, "[VPN: %s] ",  "openvpn3 sessions-list | sed -n -e 's/.*Connection, Client \\(\\)/\\1/p'" },
+    { netspeed_rx, " %s",      "enp0s31f6" },
+    { netspeed_tx, " %s  ",    "enp0s31f6" },
+
+	{ run_command, "[VPN: %s] ",  "openvpn3 sessions-list | sed -n -e 's/.*Connection, Client \\(\\)/\\1/p'" },
     { internet,    " %s  ",        NULL },
     
-    { cpu_perc,    "[Cpu %s%] ",   NULL },
-    { ram_perc,    "[Ram %s%] ",   NULL },
-    { ram_free,    "[Free %s] ",   NULL },
+    { cpu_perc,    "  %s%% ",   NULL },
+    { ram_perc,    " %s%% ",   NULL },
+    { ram_used,    " %s ",   NULL },
 
-    { netspeed_rx, "[⇩ %s",       "enp0s31f6" },
-    { netspeed_tx, "⇪ %s]   ",    "enp0s31f6" },
     
     { run_command, "🔊 %s ",       "amixer | sed -n -e 's/.*Front Left: Playback.* \\(\\[[[:digit:]]\\)/\\1/p'" },
 
